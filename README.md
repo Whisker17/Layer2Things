@@ -1,5 +1,3 @@
 # RollupThings
 
-aztex
-
- zksync
+This repo contains kinds of rollup scheme in current market
