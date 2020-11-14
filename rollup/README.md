@@ -13,7 +13,3 @@ This repo contains kinds of rollup scheme in current market
 
 
 ### ZK-Rollup
-
-
-
-### Reading Lists
