@@ -2,8 +2,8 @@ Reading Lists
 
 ## Catalogue
 
-- [**Side Chain**](#Side Chain)
-- [**State Channel**](#State Channel)
+- [**Side Chain**](#Side-Chain)
+- [**State Channel**](#State-Channel)
 - [**Plasma**](#Plasma)
 - [**Rollup**](#Rollup)
 - [**综合分析**](#综合分析)
