@@ -16,6 +16,10 @@ Reading Lists
 
   从多个角度分析侧链的问题所在，并对其优点进行一定的解释
 
+- [x] [**以太坊二层扩容 Rollup 正热，状态通道被判「死刑」了吗？**](https://www.chainnews.com/articles/851189673017.htm)
+
+  介绍了状态通道的原理，与两种 Rollup 的方案进行比较，并对其可能发生的争端提出解决方案
+
 ## State Channel
 
 - [x] [**轻松读懂状态通道如何实现即时确定性**](https://github.com/Whisker17/Layer2Things/issues/21)
