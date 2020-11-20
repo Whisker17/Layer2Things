@@ -81,3 +81,5 @@ Reading Lists
 - [x] [**理解以太坊各个Layer2 扩容解决方案（状态通道、侧链、Roll Up等）**](https://github.com/Whisker17/Layer2Things/issues/15)
 
   详细分析了各种 layer2 方案的优缺点
+
+- [ ] [**一览以太坊 2020 主要扩容方案及代表项目**](https://github.com/Whisker17/Layer2Things/issues/23)
