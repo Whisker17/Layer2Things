@@ -16,6 +16,8 @@ This repo contains kinds of rollup scheme in current market
 
 不同的 Rollup 系统有所区别的地方在于**确保 assertion 正确性的方式**。包括：非交互型 rollup（如，ZK-Rollup）、一轮交互型 rollup（如， “optimistic rollup” 提案）和多轮交互型 rollup 等等。
 
+​																																					[**Read More**](https://github.com/Whisker17/Layer2Things/tree/main/rollup/rollup/README.md)
+
 ### Optimistic Rollup
 
 Optimistic Rollups（ORs）是二层网络构造的一种，它不在以太坊的基础层上运行，而是在其之上运行。 这使大规模运行智能合约成为可能，与此同时仍然受到以太坊的保护。 这些构造类似于 Plasma ，但是以等价于 Plasma 几乎无限的可扩展性来运行与 EVM 兼容的虚拟机，称为 OVM （乐观虚拟机），该虚拟机使 ORs 能够运行所有以太坊上可以进行的操作。
