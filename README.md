@@ -1,5 +1,7 @@
 # Layer2Things
 
+![GitHub issues](https://img.shields.io/github/issues/Whisker17/Layer2Things)
+
 This repo contains kinds of layer2 scheme in current market
 
 ## Catalogue
