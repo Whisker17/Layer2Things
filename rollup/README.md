@@ -34,7 +34,7 @@ Optimistic Rollups 的名称源于解决方案的工作方式。 之所以使用
 
 ### Rollup 各方案对比
 
-- 
+- 对比
 
   - **Optimistic Rollup** ：可以支持通用的智能合约；缺点：需一到两周时间去跑证明
 
