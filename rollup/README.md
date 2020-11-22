@@ -33,3 +33,38 @@ Optimistic Rollups 的名称源于解决方案的工作方式。 之所以使用
 ​																																					[**Read More**](https://github.com/Whisker17/Layer2Things/blob/main/rollup/zkrollup/README.md)
 
 ### Rollup 各方案对比
+
+- 
+
+  - **Optimistic Rollup** ：可以支持通用的智能合约；缺点：需一到两周时间去跑证明
+
+  - **ZK Rollup**：可以支持支付以及DEX；缺点：**耗内存和CPU**、**无法支持智能合约**；离落地还有时间
+
+  Optimistic Rollup 从技术来说要比 ZK Rollup 简单很多。它的好处是可以**支持通用的智能合约**。ZK 和 Optimistic 的**区别是，Fraud Proof 变成了 Validity Proof **。
+
+  这两种验证方式相当于两种不同的思维方式：**Optimistic Rollup 是乐观思维，就是说相信验证人是不会做恶的**；**ZK是悲观思维，相信验证人还是会作恶的，所以要生成一个零知识证明，然后和 Rollup 一起打包到链上去**。大家去验证不需要跑状态转移，因为这个转移已经通过零知识证明跑过一遍了。
+
+  这就类似法律上的举证证明，是自证清白还是别人证明你是好人。ZK Rollup 相当于自证清白。其实，Optimistic 和 ZK 都牵涉到一个**最终性**的问题。Optimistic Rollup 的最终性是比较长的，用户没有跑过这个证明，提现期需要一到两周。这期间系统会给足够多的窗口，让足够多的人去验证这个事情。ZK 不会碰到这个问题，**因为一旦它的零知识证明上链，它的最终性也就确认了**。
+
+  那么 ZK Rollup 的问题是什么呢？它对于这个节点要求是非常非常高的。**ZK Rollup 就是耗 CPU 和内存，并需要很强的服务器去做这个打包**。而 Optimistic Rollup 对于打包者的要求并不那么高。唯一要求的就是**验证人在链上质押来保证不会作恶**。
+
+  由于这个 ZK 的复杂性，导致它目前只能用于一些特定的应用：比如说像那个支付和 DEX 。另外 ZK 还包含了零知识电路，它是密码学中非常新的概念，目前存在安全隐患的可能。
+
+- **Rollup 通过 将交易聚合 ，仅需要在链上进行一次交易，就可以验证多笔其他交易**。
+
+  ![image](https://user-images.githubusercontent.com/12571049/98829481-35a8e700-2474-11eb-857c-ae1568ccd0bf.png)
+
+  由于早期 ZK Rollup 的概念中，主要的缺点是**生成 SNAKR 证明过程较长**，而且也**未能支持通用型的智能合约**，所以我们提出了另一个方案，称为 Optimistic Rollup 。该方案吸收了 ZK Rollup 对于**数据可用性的优势**，以及 Plasma 的 惩罚机制 ，由于**去除了零知识证明**，所以可以更方便地支持通用型的智能合约。
+
+  ![image](https://user-images.githubusercontent.com/12571049/98830164-0a72c780-2475-11eb-9ffa-77c1965fd552.png)
+
+  ![image](https://user-images.githubusercontent.com/12571049/98830265-28402c80-2475-11eb-8baa-85a411233c74.png)
+
+- **非交互式 Rollup （zk Rollup）与 一次交互式 Rollup （Optimistic Rollup）的对比**
+
+  - 非交互型 rollup 依赖于简洁的有效性证明。每个 assertion 都会附有一个易于验证的证明（如，SNARK），以此表明 assertion 里的计算和结果都是正确的。例如，ZK-Rollup 系统使用的是 ZK-SNARKs ，即，一种易于验证的零知识证明系统 。**这对于矿工和其他观察者来说很友好**，因为验证证明的成本较低，可以立即核实 assertion 的正确性。但是，零知识证明系统也有一个很大的缺点：**除非要断言的交易非常简单，否则创建证明的成本会高得离谱**。因此，ZK-Rollup 非常适用于支付交易，但是对于复杂一点的智能合约执行来说，效果就没那么好了。
+
+  - 对于复杂的智能合约来说，我们必须采用一种交互式方法。也就是说，如果要将 assertion 发布到链上，asserter（断言者）必须缴纳保证金，并且会开放一个时间窗口，如果验证者认为该 assertion 不正确，可以在窗口期内挑战它。有时这被称为 “欺诈证明”。如果 asserter 发布了错误的 assertion ，就会失去自己的保证金。
+
+    一轮交互型 rollup 又称为“optimistic rollup”，不过这么说有点用词不当，因为所有交互型 rollup 都是乐观主义的设计。在一轮交互型 rollup 中，assertion 包含每次调用的结果，挑战者会指出 assertion 中对哪个调用给出的结果是错的。链上合约会模拟执行被挑战的调用，并验证 asserter 关于这个调用的声明是否有误。如果真的有误，则取消整个 assertion ，并罚没 asserter 的保证金。如果一个 assertion 到挑战期结束为止还没有被挑战成功的话，就会被接受并得到最终确定。
+
