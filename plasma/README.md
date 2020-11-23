@@ -57,7 +57,7 @@ Plasma 通过将高频的交易迁移到以太坊网络之外的 **侧链** 之�
 
 Plasma 作为一个框架，众人对此进行了衍生，于是产生了多种 Plasma ，这里我们介绍两个比较常见的项目：
 
-#### Plasma MVP
+- **Plasma MVP**
 
 **Plasma MVP(Minimal Viable Plasma)，最小可行性的Plasma**
 
@@ -71,7 +71,7 @@ Plasma 作为一个框架，众人对此进行了衍生，于是产生了多种 
 
 当然，我们为了保证安全性，在兑换筹码的时候需要有一定时间的缓冲期，这段时间就被称为**挑战期**，如果在这段时间里有人提出你在赌场造假的证据，那你就无法兑换成现实货币了。
 
-#### Plasma Cash
+- **Plasma Cash**
 
 相较于 Plasma MVP ，Plasma Cash 对此做了两处修改：
 
