@@ -4,6 +4,8 @@ This repo contains kinds of layer2 scheme in current market
 
 ## Catalogue
 
+- [**Lightning Network**](https://github.com/Whisker17/Layer2Things/blob/main/lightningnetwork/README.md)
+
 - [**Plasma**](https://github.com/Whisker17/Layer2Things/blob/main/plasma/README.md)
 - [**State channel**](https://github.com/Whisker17/Layer2Things/blob/main/statechannel/README.md)
 - [**Side chain**](https://github.com/Whisker17/Layer2Things/blob/main/sidechain/README.md)
